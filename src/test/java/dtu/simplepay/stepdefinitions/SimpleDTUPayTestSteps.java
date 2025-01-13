@@ -197,7 +197,7 @@ public class SimpleDTUPayTestSteps {
 
     @Given("a merchant with ID and balance {int} kr is registered with Simple DTU Pay")
     public void aMerchantWithIdAndBalanceIsRegistered(Integer balance) throws BankServiceException_Exception, IOException {
-        MerchantModel merchant = merchantService.registerMerchant("Test Merchant", "123456-7890", BigDecimal.valueOf(balance));
+        MerchantModel merchant = TestDataUtil.getMerchants().get(0);
         TestDataUtil.saveMerchant(merchant);
         System.out.println("Merchant registered with ID: " + merchant.getId() + " and balance: " + balance + " kr.");
     }

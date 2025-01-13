@@ -2,11 +2,11 @@ Feature: Simple DTU Pay
 
 
   Scenario: Register a customer with a bank account
-    Given a customer with name "Susan", CPR "030154-4426", and an initial balance of 1000 kr
+    Given a customer with name "Susan", CPR "030154-5092", and an initial balance of 1000 kr
     Then the customer is assigned a unique ID
 
   Scenario: Register a merchant with a bank account
-    Given a merchant with name "Daniel", CPR "131161-3026", and an initial balance of 1000 kr
+    Given a merchant with name "Daniel", CPR "131161-5092", and an initial balance of 1000 kr
     Then the merchant is assigned a unique ID
 
   Scenario: Successful payment from customer to merchant
