@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+
+### Test Data Files ###
+src/test/java/dtu/simplepay/testdata/*.json
