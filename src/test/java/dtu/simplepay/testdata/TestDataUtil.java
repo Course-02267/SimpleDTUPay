@@ -11,7 +11,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class TestDataUtil {
-    private static final String TEST_DATA_DIR = "test/java/dtu/simplepay/testdata";
+
+    private static final String TEST_DATA_DIR = "src/test/java/dtu/simplepay/testdata";
     private static final File CUSTOMER_FILE = new File(TEST_DATA_DIR, "customer.json");
     private static final File MERCHANT_FILE = new File(TEST_DATA_DIR, "merchant.json");
     private static final File PAYMENT_FILE = new File(TEST_DATA_DIR, "payment.json");
@@ -51,7 +52,8 @@ public class TestDataUtil {
     }
 
     public static List<CustomerModel> getCustomers() throws IOException {
-        return mapper.readValue(CUSTOMER_FILE, new TypeReference<List<CustomerModel>>() {});
+        return mapper.readValue(CUSTOMER_FILE, new TypeReference<List<CustomerModel>>() {
+        });
     }
 
     public static void saveMerchant(MerchantModel merchant) throws IOException {
@@ -61,7 +63,8 @@ public class TestDataUtil {
     }
 
     public static List<MerchantModel> getMerchants() throws IOException {
-        return mapper.readValue(MERCHANT_FILE, new TypeReference<List<MerchantModel>>() {});
+        return mapper.readValue(MERCHANT_FILE, new TypeReference<List<MerchantModel>>() {
+        });
     }
 
     public static void savePayment(PaymentModel payment) throws IOException {
@@ -71,7 +74,8 @@ public class TestDataUtil {
     }
 
     public static List<PaymentModel> getPayments() throws IOException {
-        return mapper.readValue(PAYMENT_FILE, new TypeReference<List<PaymentModel>>() {});
+        return mapper.readValue(PAYMENT_FILE, new TypeReference<List<PaymentModel>>() {
+        });
     }
 
     public static void clearTestData(String type) throws IOException {
@@ -97,7 +101,7 @@ public class TestDataUtil {
         }
     }
 
-    public static void clearAll() throws IOException{
+    public static void clearAll() throws IOException {
         mapper.writeValue(CUSTOMER_FILE, List.of());
         mapper.writeValue(MERCHANT_FILE, List.of());
         mapper.writeValue(PAYMENT_FILE, List.of());
