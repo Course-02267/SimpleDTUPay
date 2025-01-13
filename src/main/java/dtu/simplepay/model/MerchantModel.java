@@ -6,6 +6,8 @@ public class MerchantModel {
     private String cprNumber;
     private String accountNumber;
 
+    public MerchantModel() {}
+
     public MerchantModel(String id, String name, String cprNumber, String accountNumber) {
         this.id = id;
         this.name = name;
@@ -43,5 +45,15 @@ public class MerchantModel {
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "MerchantModel{" +
+                "id='" + id + '\'' + ", " +
+                "name='" + name + '\'' + ", " +
+                "cprNumber='" + cprNumber + '\'' + ", " +
+                "accountNumber='" + accountNumber + '\'' +
+                '}';
     }
 }

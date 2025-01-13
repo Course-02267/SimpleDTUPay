@@ -41,6 +41,10 @@ public class CustomerService {
     }
 
     public CustomerModel findCustomer(String id) {
-        return customers.get(id);
+        CustomerModel customer = customers.get(id);
+        if (customer == null) {
+            throw new IllegalArgumentException("Customer with ID " + id + " does not exist.");
+        }
+        return customer;
     }
 }

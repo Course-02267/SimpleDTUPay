@@ -6,6 +6,8 @@ public class CustomerModel {
     private String cprNumber;
     private String accountNumber;
 
+    public CustomerModel() {}
+
     public CustomerModel(String id, String name, String cprNumber, String accountNumber) {
         this.id = id;
         this.name = name;
@@ -38,10 +40,15 @@ public class CustomerModel {
     }
 
     public String getAccountNumber() {
-        return accountNumber;
+        return this.accountNumber;
     }
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerModel{id='" + id + "', name='" + name + "', cprNumber='" + cprNumber + "', accountNumber='" + accountNumber + "'}";
     }
 }

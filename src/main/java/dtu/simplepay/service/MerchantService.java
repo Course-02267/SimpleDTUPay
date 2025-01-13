@@ -41,6 +41,10 @@ public class MerchantService {
     }
 
     public MerchantModel findMerchant(String id) {
-        return merchants.get(id);
+        MerchantModel merchant = merchants.get(id);
+        if (merchant == null) {
+            throw new IllegalArgumentException("Merchant with ID " + id + " does not exist.");
+        }
+        return merchant;
     }
 }
